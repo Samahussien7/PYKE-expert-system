@@ -1,0 +1,138 @@
+# questions.kqb
+is_it_divorce_case($ans)
+	If it is aliment case enter y if it is incubation n?
+	---
+	$ans =yn
+
+is_M_have_incubation($ans)
+	Does the mother have the incubation?
+	---
+	$ans =yn
+
+is_child_under_2years($ans)
+	Is the child under 2 years?
+	---
+	$ans =yn
+
+is_wife_staying_your_house($ans)
+	is the wife staying in the house?
+	---
+	$ans =yn
+
+is_D_rich($ans)
+	Is the husband rich enough to pay a servant?
+	---
+	$ans =yn
+
+ch_div_st($ans)
+	What is the kind of divorce?
+	---
+	$ans = select_1
+		1: Normal divorce
+		2: Wife divorced the Husband
+		3: Divorced for harm
+		4: None of the above
+			! Sorry, that is impossible
+
+any_defect($ans)
+	If the wife have done any of these defects enter y if not enter n
+	    1! prevented herself from her husband without a legitimate excuse
+		2! left their home without a legitimate excuse
+		3! prevented her husband from entering their house without a legitimate excuse
+		4! A case was issued restricting her freedom in the rights of her husband
+		5! She broke her commitment to her husband?
+	---
+	$ans =yn
+
+is_it_in_contract($ans)
+	Is the after divorce money in the marriage contract?
+	---
+	$ans =yn
+
+is_there_witness($ans)
+	Is there any witness on the contract?
+	---
+	$ans =yn
+
+
+is_ch_und_15($ans)
+    Do you have a girl under 17 or a boy under 15?
+    ---
+    $ans=yn
+
+
+any_def_m($ans)
+	If mother not alive or alive suffering from any of these enter y if not enter n
+	    1! she is insane
+		2! have diseases prevent her from raising the children
+		3! she is addicted to drugs
+		4! she is proven cheating on her husband
+		5! she will travel outside the country and take the kids
+		6! she is married to a stranger from the child
+		7! she did practice professions that violate religion and the law
+		8! She is not trusted, such as if she frequently go out and leave the child alone?
+	---
+	$ans =yn
+
+any_def_f($ans)
+	If father not alive or alive suffering from any of these enter y if not enter n
+	    1! he is insane
+		2! he has commit crimes before
+		3! he is immoral
+		4! he do not have a woman in the house to raise the children
+		5! he will travel outside the country and take the kids
+		6! it been 6 months before the father raised the case without an acceptable excuse?
+	---
+	$ans =yn
+
+any_def_mm($ans)
+	If mothers mother dead or alive suffering from any of these enter y if not enter n
+	    1! she is insane
+		2! have diseases prevent her from raising the children
+		3! she is addicted to drugs
+		4! she is proven cheating on her husband
+		5! she will travel outside the country and take the kids
+		6! she is married to a stranger from the child
+		7! she did practice professions that violate religion and the law
+		8! She is not trusted, such as if she frequently go out and leave the child alone?
+	---
+	$ans =yn
+
+any_def_fm($ans)
+	If fathers mother dead or alive suffers from any of these enter y if not enter n
+	    1! she is insane
+		2! have diseases prevent her from raising the children
+		3! she is addicted to drugs
+		4! she is proven cheating on her husband
+		5! she will travel outside the country and take the kids
+		6! she is married to a stranger from the child
+		7! she did practice professions that violate religion and the law
+		8! She is not trusted, such as if she frequently go out and leave the child alone?
+	---
+	$ans =yn
+
+any_def_ms($ans)
+	If mothers sister dead or alive suffers from any of these enter y if not enter n
+	    1! she is insane
+		2! have diseases prevent her from raising the children
+		3! she is addicted to drugs
+		4! she is proven cheating on her husband
+		5! she will travel outside the country and take the kids
+		6! she is married to a stranger from the child
+		7! she did practice professions that violate religion and the law
+		8! She is not trusted, such as if she frequently go out and leave the child alone?
+	---
+	$ans =yn
+
+any_def_fs($ans)
+	If fathers sister dead or alive suffers from any of these enter y if not enter n
+	    1! she is insane
+		2! have diseases prevent her from raising the children
+		3! she is addicted to drugs
+		4! she is proven cheating on her husband
+		5! she will travel outside the country and take the kids
+		6! she is married to a stranger from the child
+		7! she did practice professions that violate religion and the law
+		8! She is not trusted, such as if she frequently go out and leave the child alone?
+	---
+	$ans =yn

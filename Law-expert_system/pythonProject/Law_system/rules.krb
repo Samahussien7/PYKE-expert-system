@@ -1,0 +1,171 @@
+no_money
+    use what_to_happen(husband_will_not_pay_money_for_kids_incubation)
+    when
+        questions.is_it_divorce_case(True)
+        questions.is_M_have_incubation(False)
+
+inc
+    use what_to_happen(husband_will_pay_money_for_kids_incubation)
+    when
+        questions.is_it_divorce_case(True)
+        questions.is_M_have_incubation(True)
+
+kids
+    use what_to_happen(husband_will_pay_money_for_kids_to_live_a_suitable_life)
+    when
+        questions.is_it_divorce_case(True)
+        questions.is_M_have_incubation(True)
+
+brea
+    use what_to_happen(husband_will_pay_for_breastfeeding)
+    when
+        questions.is_it_divorce_case(True)
+        questions.is_M_have_incubation(True)
+        questions.is_child_under_2years(True)
+
+house
+    use what_to_happen(husband_will_pay_rent_for_kids_house)
+    when
+        questions.is_it_divorce_case(True)
+        questions.is_M_have_incubation(True)
+        questions.is_wife_staying_your_house(False)
+
+servant
+    use what_to_happen(husband_will_pay_for_a_servant)
+    when
+        questions.is_it_divorce_case(True)
+        questions.is_M_have_incubation(True)
+        questions.is_D_rich(True)
+
+her_divorce
+    use what_to_happen(the_wife_will_give_up_on_all_her_rights)
+    when
+        questions.is_it_divorce_case(True)
+        questions.ch_div_st($ans)
+        check $ans in (2,)
+
+her_div
+    use what_to_happen(the_wife_will_give_husband_money_before_marriage_back)
+    when
+        questions.is_it_divorce_case(True)
+        questions.ch_div_st($ans)
+        check $ans in (2,)
+
+harm_expense
+    use what_to_happen(husband_pay_expense_from_2to5_years_of_the_monthly_aliment)
+    when
+        questions.is_it_divorce_case(True)
+        questions.ch_div_st($ans)
+        check $ans in (3,)
+        questions.any_defect(False)
+
+not_harm_expense
+    use what_to_happen(husband_pay_24_month_expense_of_the_monthly_aliment)
+    when
+        questions.is_it_divorce_case(True)
+        questions.ch_div_st($ans)
+        check $ans in (1,)
+        questions.any_defect(False)
+
+expense
+    use what_to_happen(husband_pay_3_month_expense_of_the_monthly_aliment)
+    when
+        questions.is_it_divorce_case(True)
+        questions.ch_div_st($ans)
+        check $ans in (1,3)
+        questions.any_defect(False)
+
+after_divorce
+    use what_to_happen(husband_pay_after_divorce_money)
+    when
+        questions.is_it_divorce_case(True)
+        questions.ch_div_st($ans)
+        check $ans in (1,3)
+        questions.is_it_in_contract(True)
+        questions.any_defect(False)
+
+aft_divorce
+    use what_to_happen(husband_pay_after_divorce_money)
+    when
+        questions.is_it_divorce_case(True)
+        questions.ch_div_st($ans)
+        check $ans in (1,3)
+        questions.is_it_in_contract(False)
+        questions.is_there_witness(True)
+        questions.any_defect(False)
+
+incubation
+    use what_to_happen(there_is_no_incubation_the_children_free_to_choose_who_to_live_with)
+    when
+        questions.is_it_divorce_case(False)
+        questions.is_ch_und_15(False)
+
+m_incubation
+    use what_to_happen(the_mother_will_have_the_incubation)
+    when
+        questions.is_it_divorce_case(False)
+        questions.is_ch_und_15(True)
+        questions.any_def_m(False)
+
+f_incubation
+    use what_to_happen(the_father_will_have_the_incubation)
+    when
+        questions.is_it_divorce_case(False)
+        questions.is_ch_und_15(True)
+        questions.any_def_m(True)
+        questions.any_def_f(False)
+
+mm_incubation
+    use what_to_happen(the_mothers_mother_will_have_the_incubation)
+    when
+        questions.is_it_divorce_case(False)
+        questions.is_ch_und_15(True)
+        questions.any_def_m(True)
+        questions.any_def_f(True)
+        questions.any_def_mm(False)
+
+
+fm_incubation
+    use what_to_happen(the_fathers_mother_will_have_the_incubation)
+    when
+        questions.is_it_divorce_case(False)
+        questions.is_ch_und_15(True)
+        questions.any_def_m(True)
+        questions.any_def_f(True)
+        questions.any_def_mm(True)
+        questions.any_def_fm(False)
+
+ms_incubation
+    use what_to_happen(the_mothers_sister_will_have_the_incubation)
+    when
+        questions.is_it_divorce_case(False)
+        questions.is_ch_und_15(True)
+        questions.any_def_m(True)
+        questions.any_def_f(True)
+        questions.any_def_mm(True)
+        questions.any_def_fm(True)
+        questions.any_def_ms(False)
+
+fs_incubation
+    use what_to_happen(the_fathers_sister_will_have_the_incubation)
+    when
+        questions.is_it_divorce_case(False)
+        questions.is_ch_und_15(True)
+        questions.any_def_m(True)
+        questions.any_def_f(True)
+        questions.any_def_mm(True)
+        questions.any_def_fm(True)
+        questions.any_def_ms(True)
+        questions.any_def_fs(False)
+
+no_incubation
+    use what_to_happen(the_child_will_go_to_a_shelter)
+    when
+        questions.is_it_divorce_case(False)
+        questions.is_ch_und_15(True)
+        questions.any_def_m(True)
+        questions.any_def_f(True)
+        questions.any_def_mm(True)
+        questions.any_def_fm(True)
+        questions.any_def_ms(True)
+        questions.any_def_fs(True)
