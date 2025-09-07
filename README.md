@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains an expert system built using the Pyke package in Python that provides legal guidance on family court matters, specifically focusing on child custody and alimony cases according to Personal Status Law. The system implements backward chaining reasoning to determine legal outcomes based on established rules and conditions.
+This repository contains an expert system built using the Pyke package in Python and a GUI. The expert system provides legal guidance on family court matters, specifically focusing on child custody and alimony cases according to Personal Status Law. The system implements backward chaining reasoning to determine legal outcomes based on established rules and conditions.
 
 ## Domain of Law
 
@@ -52,7 +52,10 @@ The system incorporates legal knowledge from:
 ## Legal Disclaimer
 
 This expert system is designed for educational and informational purposes only. It does not constitute legal advice. For actual legal matters, please consult with a qualified attorney  specialized in family court affairs.
-##Demo
+
+
+## Demo
+
 [demo](https://github.com/user-attachments/assets/eca25c91-9d0b-438a-b2d7-d06a914798b7)
 
 
